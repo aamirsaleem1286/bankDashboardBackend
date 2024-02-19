@@ -1,15 +1,16 @@
 const mongoose = require("mongoose");
+
 mongoose
   .connect(
     "mongodb+srv://mfhtdapp:baIf7iycE1VIKL6F@cluster0.5gch7hc.mongodb.net/bank",
     {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
     }
   )
   .then(() => {
-    console.log("connect to mongo datbase");
+    console.log("Connected to the MongoDB database");
   })
-  .catch((e) => {
-    console.log(e);
+  .catch((error) => {
+    console.error("Error connecting to MongoDB:", error);
   });
