@@ -2,11 +2,7 @@ const mongoose = require("mongoose");
 
 mongoose
   .connect(
-    "mongodb+srv://mfhtdapp:baIf7iycE1VIKL6F@cluster0.5gch7hc.mongodb.net/bank",
-    {
-      useCreateIndex: true,
-      useFindAndModify: false,
-    }
+    "mongodb+srv://mfhtdapp:baIf7iycE1VIKL6F@cluster0.5gch7hc.mongodb.net/bank"
   )
   .then(() => {
     console.log("Connected to the MongoDB database");
