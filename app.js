@@ -21,7 +21,7 @@ app.use("/api/v1/bank", require("./routes/bankData"));
 
 app.use(errorHandle);
 
-const server = app.listen(port, () => {
+const server = app.listen(port,"0.0.0.0", () => {
   console.log(
     `the application is listening on http://localhost:${port}`.yellow.bold
   );
